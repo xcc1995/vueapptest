@@ -62,5 +62,7 @@ export default {
 .swiper-area{
   /* border: 1px red solid; */
   clear: both;
+  max-height: 15rem;
+  overflow: hidden;
 }
 </style>
