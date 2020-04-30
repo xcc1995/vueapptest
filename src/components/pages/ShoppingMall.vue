@@ -24,6 +24,7 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   data() {
     return {
@@ -34,7 +35,10 @@ export default {
         'https://img.yzcdn.cn/vant/apple-2.jpg',
       ],
     };
-  }
+  },
+  mounted () {
+    
+  },
 };
 </script>
 
