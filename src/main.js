@@ -4,7 +4,7 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
-require('./mock.js');
+require('./mock/mock.js');
 import { Button,Col, Row ,Field,Swipe, SwipeItem,Lazyload } from 'vant';
 Vue.use(Button).use(Col).use(Row).use(Field).use(Swipe).use(SwipeItem).use(Lazyload);
 
