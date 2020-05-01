@@ -24,21 +24,29 @@
 </template>
 
 <script>
-import axios from 'axios'
+// import axios from "axios";
+import {getList} from '../../api';
 export default {
   data() {
     return {
       locationwz: require("../../assets/images/location.png"),
       value: "",
-         images: [
-        'https://img.yzcdn.cn/vant/apple-1.jpg',
-        'https://img.yzcdn.cn/vant/apple-2.jpg',
-      ],
+      images: [
+        "https://img.yzcdn.cn/vant/apple-1.jpg",
+        "https://img.yzcdn.cn/vant/apple-2.jpg"
+      ]
     };
   },
-  mounted () {
-    
+  methods: {
+   async init() {
+      // 请求后端数据,查询数据源
+     let {data}=await getList();
+     console.log(data);
+    }
   },
+  mounted() {
+    this.init();
+  }
 };
 </script>
 
@@ -63,7 +71,7 @@ export default {
   padding-top: 0.2rem;
   padding-left: 0.3rem;
 }
-.swiper-area{
+.swiper-area {
   /* border: 1px red solid; */
   clear: both;
   max-height: 15rem;
